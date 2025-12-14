@@ -28,30 +28,6 @@ jobs:
               gpu_amd: "false",
               lite_build: "false",
             }
-          - {
-              name: "lite",
-              base: "python:3.11-slim",
-              gpu: "false",
-              gpu_nvidia: "false",
-              gpu_amd: "false",
-              lite_build: "true",
-            }
-          - {
-              name: "gpu-nvidia",
-              base: "nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04",
-              gpu: "true",
-              gpu_nvidia: "true",
-              gpu_amd: "false",
-              lite_build: "false",
-            }
-          - {
-              name: "gpu-amd",
-              base: "rocm/dev-ubuntu-22.04:6.4-complete",
-              gpu: "false",
-              gpu_nvidia: "false",
-              gpu_amd: "true",
-              lite_build: "false",
-            }
 
     steps:
       - name: Checkout repository
